@@ -1,0 +1,16 @@
+#!/bin/sh
+
+PERSONAL_REPO_PATH="/path/to/your/local/personal-repo"
+LOG_FILE="$PERSONAL_REPO_PATH/commit-log.txt"
+
+# Add new commit message to log file
+echo "$(date): New commit pushed to company repo" >> $LOG_FILE
+
+# Commit and push to personal repo
+cd $PERSONAL_REPO_PATH
+git add commit-log.txt
+git commit -m "Log commit from company repo"
+git push origin main
+
+# Go Back
+cd -
