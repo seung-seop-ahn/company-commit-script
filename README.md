@@ -4,6 +4,8 @@
 
 ## Install
 
+- Create personal repository
+
 ```sh
 mv script/post-commit (your_project)/.git/hooks/
 chmod +x (your_project)/.git/hooks/post-commit
